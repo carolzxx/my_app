@@ -1,122 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Quiz App</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f9f9f9;
-      margin: 0;
-      padding: 0;
-    }
-
-    .container {
-      max-width: 600px;
-      margin: 60px auto;
-      background: #fff;
-      padding: 30px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-      border-radius: 12px;
-    }
-
-    h1 {
-      text-align: center;
-      margin-bottom: 30px;
-      color: #333;
-    }
-
-    .question {
-      font-size: 1.2rem;
-      margin-bottom: 20px;
-    }
-
-    .options {
-      list-style-type: none;
-      padding: 0;
-    }
-
-    .options li {
-      margin: 10px 0;
-    }
-
-    .options input {
-      margin-right: 10px;
-    }
-
-    button {
-      display: block;
-      width: 100%;
-      padding: 12px;
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      font-size: 1rem;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #45a049;
-    }
-
-    .result {
-      margin-top: 20px;
-      text-align: center;
-      font-weight: bold;
-      color: #333;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GamingCoach.AI - AI-Powered Coaching</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <div class="container">
-    <h1>Quiz App</h1>
+    <nav class="navbar">
+        <img src="logo.png" alt="GamingCoach.AI Logo" class="logo">
+        <ul class="nav-links">
+            <li><a href="#">The Problem</a></li>
+            <li><a href="#">Our Solution</a></li>
+            <li><a href="#">How It Works</a></li>
+            <li><a href="#">Pricing</a></li>
+        </ul>
+    </nav>
 
-    <div class="quiz-box">
-      <div class="question" id="question">
-        What is the capital of France?
-      </div>
-
-      <ul class="options">
-        <li><label><input type="radio" name="answer" value="A"> A. Berlin</label></li>
-        <li><label><input type="radio" name="answer" value="B"> B. Madrid</label></li>
-        <li><label><input type="radio" name="answer" value="C"> C. Paris</label></li>
-        <li><label><input type="radio" name="answer" value="D"> D. Rome</label></li>
-      </ul>
-
-      <button onclick="checkAnswer()">Submit</button>
-
-      <div class="result" id="result"></div>
-    </div>
-  </div>
-
-  <script>
-    function checkAnswer() {
-      const correctAnswer = 'C';
-      const options = document.getElementsByName('answer');
-      let selected = null;
-
-      for (const option of options) {
-        if (option.checked) {
-          selected = option.value;
-          break;
-        }
-      }
-
-      const resultBox = document.getElementById('result');
-      if (selected === null) {
-        resultBox.textContent = 'Please select an answer.';
-      } else if (selected === correctAnswer) {
-        resultBox.textContent = '✅ Correct!';
-        resultBox.style.color = 'green';
-      } else {
-        resultBox.textContent = '❌ Wrong answer. Try again!';
-        resultBox.style.color = 'red';
-      }
-    }
-  </script>
+    <header class="hero">
+        <div class="hero-content">
+            <h1><span class="highlight">GamingCoach</span>.AI</h1>
+            <p>Level up your game with personalized AI coaching</p>
+            <div class="cta-buttons">
+                <button class="btn primary">Start Free Trial</button>
+                <button class="btn secondary">Watch Demo</button>
+            </div>
+        </div>
+    </header>
 
 </body>
 </html>
+
+
